@@ -12,5 +12,8 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum install jenkins -y
 sudo systemctl start jenkins.service
 sudo systemctl enable jenkins.service
+sudo systemctl start firewalld.service
+sudo systemctl enable firewalld.service
 sudo firewall-cmd --zone=public --permanent --add-port=8080/tcp
 sudo firewall-cmd --reload
+$#
